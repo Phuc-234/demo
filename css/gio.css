@@ -1,0 +1,101 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+.container{
+    margin: 0 auto;
+}
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding: 0px 10px;
+    background-color: rgb(255, 255, 255);
+}
+#logo{
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    display: block;
+    padding-left: 0px;
+    margin-right:500px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.boxheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main-menu{
+    display: flex;
+}
+#main-menu a{
+    text-transform: uppercase;
+    padding: 5px 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    display: block;
+}
+#main-menu a:hover{
+    color: red;
+}
+
+.tieude{
+    text-align: center;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 20px;
+}
+.boxcenter {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 10px;
+    padding: 5px 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#showcart img {
+    height: 80px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+th,
+td {
+    background-color: rgb(255, 255, 255);
+    border: 1px rgb(255, 0, 0) solid;
+    padding: 5px 10px;
+    text-align: center;
+}

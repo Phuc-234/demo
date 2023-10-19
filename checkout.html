@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Thanh Toán</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/head.css" rel="stylesheet">
+</head>
+
+<body onload="showtt()">
+    <header>
+        <div class="boxheader">
+            <img src="./images/logo.jpg" style="width: 90px;height: 80px;margin-left: 30px;">
+            <a href="" id="logo">HIGHTLANDS COFFEE</a>
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="cart.html">Giỏ hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                    <li><a href="donhang.html">Hóa Đơn</a></li>
+                    
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <div class="boxcenter">
+        <div class="box1" style="float: left; width: 45%;">
+            <!-- <h1>Thông tin khách hàng</h1> -->
+            <div id="hoahoe">
+                <!-- <h2 style="color: rgb(209, 14, 14);">ĐĂNG KÝ</h2> -->
+                    <input type="text" class="txt" name="name" id="userName" placeholder="Họ và Tên"><br><br>
+                    <input type="text" class="txt" name="phone" id="phoneNumber" placeholder="Số điện thoại"><br><br>
+                    <input type="text" class="txt" name="location" id="location" placeholder="Địa chỉ"><br><br>
+                    <input type="text" class="txt" name="email" id="email"  placeholder="Email" aria-label="Email"><br><br>
+                    <input type="password" class="txt" name="pass" id="password"  placeholder="Mật khẩu" ><br><br>
+                <!-- <div>
+                    <label>Họ và tên</label>
+                    <input style="color: #000;" type="text" placeholder="Doe">
+                </div>            
+                <div>
+                    <label>Số điện thoại</label>
+                    <input style="color: #000;" type="text" placeholder="+123 456 789" ">
+                </div>
+                <div>
+                    <label>Địa Chỉ</label>
+                    <input style="color: #000;" type="text" placeholder="123 Street"">
+                </div>
+                <div>
+                    <label>E-mail</label>
+                    <input style="color: #000;" type="text" placeholder="example@email.com"">
+                </div> -->
+            </div>
+            <div id="btn">
+                <button  onclick="butt()" style="width:450px; margin-top: 50px;margin-left: 25px; height: 50px;font-size: 30px; color: red;font-weight: bold;text-transform: uppercase;background-color: rgb(255, 255, 255);border: 2px solid red;">Thanh Toán</button>
+            </div>
+        </div>
+        <div class="box2" style="float: right;width: 50%;">
+            <h1 style="margin-left: 70px;">THÔNG TIN GIỎ HÀNG</h1>
+            <table>
+                <tr>
+                    <th>STT</th>
+                    <th>Hình</th>
+                    <th style="width: 300px">Tên Sản Phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    
+                </tr>
+                <tbody id="showcart">
+                    
+                </tbody>
+                
+            </table>
+            
+        </div>
+
+    </div>
+
+    <script src="asm2.js"></script>
+    <!-- <script type="module" src="registerAccount.js"></script> -->
+</body>
+
+</html>

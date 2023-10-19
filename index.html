@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    
+</head>
+<style>
+    .product-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Allows products to wrap to the next line if the screen is narrow */
+    }
+
+    .boxsp {
+        margin: 10px;
+        text-align: center;
+        * {
+  box-sizing:border-box
+}
+h2 {
+  text-align: center;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+/* Ẩn các slider */
+.mySlides {
+    display: none;
+}
+/* Định dạng nội dung Caption */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+ 
+/* định dạng các chấm chuyển đổi các slide */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+/* khi được hover, active đổi màu nền */
+.active, .dot:hover {
+  background-color: #717171;
+}
+ 
+/* Thêm hiệu ứng khi chuyển đổi các slide */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+ 
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+ 
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+    }
+    /* CSS cho phần footer */
+.footer {
+  background-color:#b22830;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  /* Tắt tự động chuyển xuống hàng */
+}
+
+.footer div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  background-color: #b22830;
+  /* Màu nền */
+  color: white;
+  /* Màu chữ */
+  text-align: center;
+  padding: 10px;
+}
+
+.footer p {
+  margin: 0;
+  /* Loại bỏ margin */
+  padding: 0;
+  /* Loại bỏ padding */
+  text-indent: 0;
+  /* Loại bỏ thụt vào hàng đầu tiên */
+}
+
+/*  */
+</style>
+
+<!-- <body onload="loaddata()"> -->
+<body >
+
+    <div class="container">
+        <div class="baba">
+            <div class="boxheader">
+                <img src="./images/logo.jpg" style="width: 90px;height: 80px;margin-left: 30px;">
+                <a href="" id="logo">HIGHTLANDS COFFEE</a>
+                <nav>
+                    <ul id="main-menu">
+                        <li><a href="">Trang Chủ</a></li>
+                        <li><a href="cart.html">Giỏ hàng</a></li>
+                        <li><a href="checkout.html">Thanh Toán</a></li>
+                        <li><a href="donhang.html">Hóa Đơn</a></li>
+                        <li><a id="hrefLogin" href="login.html">login</a></li>
+                        <li><a id="hrefLogout" >LogOut</a></li>
+                        <li><a href="cart.html">
+                            <i class="fa fa-shopping-cart" style="font-size:20px;margin-right: 5px;"></i>
+                            <span id="countsp">0</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- sildeshow -->
+        <div class="slideshow-container">
+  <h2>Freetus.net hướng dẫn tạo slideShow đơn giản</h2>
+  <div class="mySlides fade">
+    <img src="./images/slide3.jpg" style="width:100%">
+    <div class="text">Nội dung caption của slide đầu tiên!</div>
+  </div>
+ 
+  <div class="mySlides fade">
+    <img src="./images/slide4.png" style="width:100%">
+    <div class="text">Nội dung caption của slide thứ 2!</div>
+  </div>
+ 
+  <div class="mySlides fade">
+    <img src="./images/slide5.jpg" style="width:100%;">
+    <div class="text">Nội dung caption của slide thứ 3!</div>
+  </div>
+</div>
+<br>
+ 
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(0)"></span> 
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+</div>
+            <!-- <img src="./images/banner2.png" width="100%" height="500px"> -->
+        
+        <div id="tieude">
+            <h3>Danh sách sản phẩm</h3>
+        </div>
+        <div class="product-container" id="demo">
+            <!-- <div class="boxsp">
+                <div class="row img"><img src="./images/images123.jpg" alt=""></div>
+                
+                <p align="center"> Giá:
+                <span>45000</span> VNĐ</p><a href="">Matcha đá xay</a> <br>
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp">
+                <div class="row img"><img src="./images/hinh123.jpg" alt=""></div>
+                
+                <p > Giá:
+                <span>38000</span> VNĐ</p><a href="">Coffee Gray</a> <br>
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp">
+                <div class="row img"><img src="images/01.png" alt=""></div>
+                
+                <p align="center"> Giá:
+                <span>29000</span> VNĐ</p><a href="">Phin sữa đá</a> <br>
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp">
+                <div class="row img"><img src="images/02.png" alt=""></div>
+                
+                <p align="center"> Giá:
+                <span>55000</span> VNĐ</p><a href="">FREEZE Trà Xanh</a> <br>
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+           
+            <div class="boxsp">
+                <div class="row img"><img src="images/03.png" alt=""></div>
+                
+                <p align="center"> Giá:
+                <span>39000</span> VNĐ</p><a href="">COOKIES & CREAM</a> <br>
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp">
+                <div class="row img"><img src="images/04.png" alt=""></div>
+                
+                <p align="center"> Giá:
+                <span>35000</span> VNĐ</p><a href="">FREEZE COFFEE</a> <br>
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp">
+                <div class="row img"><img src="images/05.png" alt=""></div>
+                
+                <p align="center"> Giá:
+                <span>30000</span> VNĐ</p><a href="">Trà Xanh Đậu Đỏ</a> <br>
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp">
+                <div class="row img"><img src="images/06.png" alt=""></div>
+                
+                <p align="center"> Giá:
+                <span>49000</span> VNĐ</p><a href="">Trà Thạch Vãi</a> <br>
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp">
+                <div class="row img"><img src="images/07.png" alt=""></div>
+                
+                <p align="center"> Giá:
+                <span>40000</span> VNĐ</p><a href="">Trà Thanh Đào</a> <br>
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp">
+                <div class="row img"><img src="images/08.png" alt=""></div>
+                
+                <p align="center"> Giá:
+                <span>59000</span> VNĐ</p><a href="">Cà Phê Hòa Tan 3in1(20 Gói)</a> <br>
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+        </div> -->
+    </div>
+    <div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+    
+    </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div>
+                
+                <h3>Địa chỉ</h3>
+                <p>HIGHLANDS COFFEE TRƯỜNG CHINH</p>
+                <p>Địa chỉ: 506 Trường Chinh,  
+                Quận Tân Bình,Tp Hồ Chí Minh</p>
+                <br>
+                <p>HIGHLANDS COFFEE VINCOM LÊ VĂN VIỆT</p>
+                    <p>Tầng L1, Vincom Plaza Lê Văn Việt, 50 Lê Văn Việt, Phường Hiệp Phú, Quận 9, Tp. Hồ Chí Minh  </p>
+                
+            </div>
+            <div>
+                <h3>Về chúng tôi</h3>
+                <p>Highlands Coffee® được thành lập vào năm 1999, bắt nguồn từ tình yêu dành cho đất Việt cùng với cà phê và cộng đồng nơi đây. Ngay từ những ngày đầu tiên, mục tiêu của chúng mình là có thể phục vụ và góp phần phát triển cộng đồng bằng cách siết chặt thêm sự kết nối và sự gắn bó giữa người với người.</p>
+            </div>
+            <div>
+                <h3>Giá Trị Cốt Lõi
+                </h3>
+                <p> Quan tâm khách hàng
+                    Tinh thần đồng đội & hợp tác
+                    Tôn trọng & liêm chính
+                    Tự hào Việt  & chia sẻ đến cộng đồng
+                    Đam mê <br> nhượng quyền thương hiệu</p>
+            </div>
+            <div>
+                <h3>Bản đồ</h3>
+                
+                <iframe
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.12946527684!2d106.63520107514604!3d10.801394989348866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529ee7281eb79%3A0x2645ea00c2f768a4!2sHighlands%20Coffee%20-%20Tr%C6%B0%E1%BB%9Dng%20Chinh!5e0!3m2!1sen!2s!4v1697100146519!5m2!1sen!2s" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+            </div>
+        </div>
+        
+        <div class="copyright">
+            @2023 Bản quyền này thuộc về HightLands
+        </div>
+
+    </footer>
+   
+    <script type="module"   src="index.js"></script>
+    <script   src="asm2.js"></script>
+    <!-- <script type="module"  src="utils.js"></script> -->
+
+    
+<!-- <script type="module" src="./firebase.js"></script> -->
+
+
+
+
+
+
+
+
+
+</body>
+<script>
+    
+    //khai báo biến slideIndex đại diện cho slide hiện tại
+    var slideIndex;
+    // KHai bào hàm hiển thị slide
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+   
+        slides[slideIndex].style.display = "block";  
+        dots[slideIndex].className += " active";
+        //chuyển đến slide tiếp theo
+        slideIndex++;
+        //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+        if (slideIndex > slides.length - 1) {
+          slideIndex = 0
+        }    
+        //tự động chuyển đổi slide sau 5s
+        setTimeout(showSlides, 3000);
+    }
+    //mặc định hiển thị slide đầu tiên 
+    showSlides(slideIndex = 0);
+   
+   
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+  </script>
+</html>

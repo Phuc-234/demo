@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/gio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Giỏ hàng</title>
+    
+</head>
+<style>
+    .quantity {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quantity input {
+        width: 40px;
+        text-align: center;
+    }
+
+    .quantity button {
+        cursor: pointer;
+    }
+</style>
+<body onload="showmycart()">
+    <div class="container">
+        <div class="baba">
+            <div class="boxheader">
+                <img src="./images/logo.jpg" style="width: 90px;height: 80px;margin-left: 30px;">
+                <a href="" id="logo">HIGHTLANDS COFFEE</a>
+                <nav>
+                    <ul id="main-menu">
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="cart.html">Giỏ hàng</a></li>
+                        <li><a href="checkout.html">Thanh Toán</a></li>
+                        <li><a href="donhang.html">Hóa Đơn</a></li>
+                        <!-- <li><a href="dk.html">login</a></li> -->
+                        <li><a href="cart.html">
+                            <i class="fa fa-shopping-cart" style="font-size:20px;margin-right: 5px;"></i>
+                            <span id="countsp">0</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <hr>
+        <div class="phancach">
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="boxcenter">
+            <div class="box2">
+                <h1>THÔNG TIN GIỎ HÀNG</h1>
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>Hình</th>
+                        <th style="width: 200px">Tên Sản Phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                        <th>Xóa</th>
+                        <!-- <div id="tongtien">Tổng tiền: 0 VNĐ</div> -->
+                    </tr>
+                    <tbody id="showcart">
+                        
+                    </tbody>
+                    
+                </table>
+            </div>
+    
+        </div>
+    </div>
+    
+    <script src="asm2.js"></script>
+    <!-- <script src="cart.js"></script> -->
+</body>
+</html>

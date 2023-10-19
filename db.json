@@ -1,0 +1,72 @@
+{
+    "products":[{
+                "id": 1,
+                "name":  "Matcha đá xay",
+                "images": "images/images123.jpg",
+                "price": 45000
+
+    },
+    {
+        "id": 2,
+        "name":  "Coffee Gray",
+        "images": "images/hinh123.jpg",
+        "price": 38000
+
+    },
+    {
+    "id": 3,
+    "name":  "Phin sữa đá",
+    "images": "images/01.png",
+    "price": 29000
+    },
+{
+    "id": 4,
+    "name":  "FREEZE Trà Xanh",
+    "images": "images/02.png",
+    "price": 55000
+
+},
+{
+    "id": 5,
+    "name":  "COOKIES & CREAM",
+    "images": "images/03.png",
+    "price": 39000
+
+},
+{
+    "id": 6,
+    "name":  "FREEZE COFFEE",
+    "images": "images/04.png",
+    "price": 35000
+
+},
+{
+    "id": 7,
+    "name":  "Trà Xanh Đậu Đỏ",
+    "images": "images/05.png",
+    "price": 30000
+
+},
+{
+    "id": 8,
+    "name":  "Trà Thạch Vãi",
+    "images": "images/06.png",
+    "price": 49000
+
+},
+{
+    "id": 9,
+    "name":  "Trà Thanh Đào",
+    "images": "images/07.png",
+    "price": 40000
+
+},
+{
+    "id": 10,
+    "name":  "Cà Phê Hòa Tan 3in1(20 Gói)",
+    "images": "images/08.png",
+    "price": 59000
+
+}
+]
+}

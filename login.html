@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="css/dangnhap.css">
+</head>
+<body >
+    <div class="container">
+       
+        
+        <div><br><br><br><br><br><br>
+            <div id="boxlogin" class="boxdangnhap">
+                <h2 style="color: red;">ĐĂNG NHẬP</h2>
+                    
+                    <input type="text" class="txt" name="email" id="number" placeholder="Số điện thoại">
+                    
+                    <input type="password" class="txt" name="pass" id="password1"  placeholder="Mật khẩu" aria-label="Email">
+                    <button id="btnLogin"  class="btn">Đăng nhập</button>
+                <br><br><hr>
+                <button  onclick="dangkydi()" style="margin-bottom:10px;width: 300px;" class="btn">Đăng ký tại đây</button>           
+            </div>
+        </div>
+    </div>
+    
+    <!-- <script  src="asm2.js"></script> -->
+<script src="asm2.js"></script>
+<script type="module" src="login.js"></script>
+
+
+   <!-- <script type="module" src="./firebase.js"></script>
+
+   <script>
+   import { writeUserData } from "./firebase.js";
+
+    function LoginScreen (){
+        const tht = JSON.parse(sessionStorage.getItem("thanhtoan"));
+    const kq = document.getElementById("boxlogin").children;
+    const num = kq[1].value;
+    const pass = kq[2].value;
+    writeUserData(num)
+
+    console.log("phoneNumber",num)
+
+    }
+   </script> -->
+
+
+</body>
+</html>
+
